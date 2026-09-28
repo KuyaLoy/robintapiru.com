@@ -12,4 +12,4 @@
 - **Workflow Role:**
   - Command Center Chat = Planning, architecture, rules, reviews.
   - Developer Chat = Writing code, scaffolding, dependencies, build tests.
-- **Immediate Task:** Initialize Next.js project and build an animated, high-aesthetic Coming Soon page with theme switcher and social links.
+- **Status:** Milestone 1 complete. Next: connect Cloudflare Pages to GitHub repo for auto-deploy.

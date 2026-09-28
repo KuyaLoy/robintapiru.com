@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  body {
+    @apply bg-surface-light text-black dark:bg-surface-dark dark:text-white antialiased;
+  }
+
+  *:focus-visible {
+    outline: 1px solid #F5412C;
+    outline-offset: 4px;
+  }
+
+  ::selection {
+    background-color: #F5412C;
+    color: white;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-size: 100px 100px;
+    background-image: 
+      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    mask-image: radial-gradient(ellipse at 30% 70%, black 20%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at 30% 70%, black 20%, transparent 70%);
+  }
+  
+  .light .bg-grid {
+    background-image: 
+      linear-gradient(to right, rgba(10,10,10,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10,10,10,0.06) 1px, transparent 1px);
+  }
+}
