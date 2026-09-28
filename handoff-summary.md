@@ -7,6 +7,7 @@
 - **Current Milestone:** Milestone 1 — Coming Soon Page
 - **Stack:** Next.js (App Router, TypeScript) + Tailwind CSS + `next-themes` (Dark/Light mode) + Framer Motion
 - **Hosting:** Cloudflare Pages (Free tier, static export)
+- **GitHub:** [KuyaLoy/robintapiru.com](https://github.com/KuyaLoy/robintapiru.com) (public)
 - **Code Style:** Clean, human-like, senior-level code, modular architecture, no robot/bloated comments.
 - **Workflow Role:**
   - Command Center Chat = Planning, architecture, rules, reviews.

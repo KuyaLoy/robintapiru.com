@@ -5,6 +5,8 @@ Build a modern, highly polished personal portfolio website for **Robin Tapiru** 
 - **Phase 1 (Immediate Target):** High-converting, stylish "Coming Soon" teaser page with dark/light mode and smooth micro-animations.
 - **Phase 2 (Future Target):** Full interactive portfolio with rich GSAP / Framer Motion animations, project showcases, skills, and contact form.
 - **Hosting / Deployment:** Cloudflare Pages (Free tier) connected to `robintapiru.com`.
+- **GitHub Repo:** [KuyaLoy/robintapiru.com](https://github.com/KuyaLoy/robintapiru.com) (public, MIT license)
+- **GitHub Username:** `KuyaLoy`
 
 ---
 
@@ -54,6 +56,7 @@ Build a modern, highly polished personal portfolio website for **Robin Tapiru** 
 | 2026-09-28 | Fixed plugin blocking issue (`telemetry_hook_bundle.js.disabled`) | Command Center |
 | 2026-09-28 | Defined stack: Next.js + Tailwind + Dark Mode + Motion + Cloudflare Pages | Command Center |
 | 2026-09-28 | Established `handoff-summary.md` protocol and formulated Developer Chat Prompt | Command Center |
+| 2026-09-28 | Created GitHub repo `KuyaLoy/robintapiru.com`, connected local folder, pushed handoff docs | Command Center |
 
 ---
 
