@@ -12,4 +12,4 @@
 - **Workflow Role:**
   - Command Center Chat = Planning, architecture, rules, reviews.
   - Developer Chat = Writing code, scaffolding, dependencies, build tests.
-- **Status:** Milestone 1 complete (V2 Active Telemetry Overhaul done). Next: connect Cloudflare Pages to GitHub repo for auto-deploy.
+- **Status:** Milestone 1 complete (V3 Kinetic Monolith pivot completed). Next: connect Cloudflare Pages to GitHub repo for auto-deploy.

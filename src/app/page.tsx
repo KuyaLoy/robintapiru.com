@@ -1,57 +1,87 @@
 'use client'
 
 import * as React from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
-import { ThemeToggle } from '@/components/ui/theme-toggle'
-import { LiveClocks } from '@/components/ui/live-clocks'
-import { Hero } from '@/components/sections/hero'
-import { TerminalCard } from '@/components/sections/terminal-card'
-import { SocialFooter } from '@/components/sections/social-footer'
+import { motion } from 'framer-motion'
+import { CustomCursor } from '@/components/ui/custom-cursor'
+import { MagneticText } from '@/components/ui/magnetic-text'
 
 export default function Home() {
-  const shouldReduceMotion = useReducedMotion()
-
   return (
-    <main className="min-h-screen relative flex flex-col justify-between overflow-hidden bg-surface-light dark:bg-surface-dark text-black dark:text-white">
-      {/* Background Grids & Ambient Glow Beam */}
-      <div className="absolute inset-0 z-0 pointer-events-none bg-grid" />
-      <div className="absolute inset-0 z-0 pointer-events-none ambient-glow" />
+    <main className="relative w-screen h-screen overflow-hidden bg-[#F5412C]">
+      <CustomCursor />
 
-      {/* Top Header Utility Bar */}
-      <header className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-between z-20 relative">
-        <div className="font-mono text-xs font-semibold tracking-widest text-black/80 dark:text-white/80">
-          RT<span className="text-accent">//</span>DEV
-        </div>
-        <div className="flex items-center gap-6">
-          <LiveClocks />
-          <ThemeToggle />
-        </div>
-      </header>
+      {/* The Black Steel Curtain Entrance */}
+      <motion.div
+        className="absolute inset-0 z-10 bg-[#0B0B0B]"
+        initial={{ y: '-100%' }}
+        animate={{ y: '0%' }}
+        transition={{ duration: 0.8, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
+      />
 
-      {/* Main Dual-Column Content */}
-      <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-10 z-10 relative flex-1 flex items-center">
-        <motion.div
-          initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 w-full items-center"
-        >
-          {/* Left Column: Hero, Progress, Copy */}
-          <div className="col-span-1 lg:col-span-6 flex flex-col gap-6">
-            <Hero />
+      {/* Main Content (Behind cursor, on top of curtain) */}
+      <div className="absolute inset-0 z-20 flex flex-col justify-center items-center pointer-events-none">
+        
+        {/* Massive Magnetic Typography */}
+        <div className="flex flex-col items-center pointer-events-auto">
+          <div className="overflow-hidden">
+            <motion.div
+              initial={{ y: '110%' }}
+              animate={{ y: '0%' }}
+              transition={{ duration: 1, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <MagneticText className="text-[12vw] leading-none font-black tracking-tighter">
+                R — T
+              </MagneticText>
+            </motion.div>
           </div>
-
-          {/* Right Column: Interactive Terminal Preview */}
-          <div className="col-span-1 lg:col-span-6 w-full">
-            <TerminalCard />
+          <div className="overflow-hidden">
+            <motion.div
+              initial={{ y: '110%' }}
+              animate={{ y: '0%' }}
+              transition={{ duration: 1, delay: 1.3, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <MagneticText className="text-[4vw] md:text-[3vw] leading-none font-medium tracking-tight text-white/90 mt-2">
+                AGENCY ENGINEER
+              </MagneticText>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Footer Navigation & Social Links */}
-      <footer className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-6 border-t border-black/5 dark:border-white/5 z-20 relative">
-        <SocialFooter />
-      </footer>
+      {/* The Razor Line & Micro Typography */}
+      <motion.div 
+        className="absolute bottom-[20%] left-0 w-full z-20"
+        initial={{ opacity: 0, scaleX: 0 }}
+        animate={{ opacity: 1, scaleX: 1 }}
+        transition={{ duration: 1.5, delay: 1.5, ease: [0.76, 0, 0.24, 1] }}
+      >
+        <div className="max-w-[90vw] mx-auto relative">
+          <div className="absolute bottom-1 left-0 font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-[#666666]">
+            [ ENG_V3.0 ] &nbsp;&nbsp; LAT: 25.2048° N, LONG: 55.2708° E &nbsp;&nbsp; STATUS: IMMINENT
+          </div>
+          <div className="w-full h-[1px] bg-[#F5412C] origin-left" />
+        </div>
+      </motion.div>
+
+      {/* Corner Navigation */}
+      <motion.div 
+        className="absolute bottom-8 left-0 w-full px-[5vw] z-30 flex justify-between font-mono text-[11px] tracking-widest text-white/40 uppercase pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 2 }}
+      >
+        <div className="flex gap-6 pointer-events-auto">
+          <a href="https://aiims.group" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">AIIMS Group</a>
+          <span className="opacity-30">/</span>
+          <a href="https://betterkabugao.org" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">BetterKabugao</a>
+        </div>
+        <div className="flex gap-6 pointer-events-auto">
+          <a href="https://www.linkedin.com/in/robintapiru/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">LinkedIn</a>
+          <span className="opacity-30">/</span>
+          <a href="https://github.com/KuyaLoy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">GitHub</a>
+        </div>
+      </motion.div>
+
     </main>
   )
 }

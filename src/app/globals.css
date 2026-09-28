@@ -3,46 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
   body {
-    @apply bg-surface-light text-black dark:bg-surface-dark dark:text-white antialiased;
-  }
-
-  *:focus-visible {
-    outline: 1px solid #F5412C;
-    outline-offset: 4px;
-  }
-
-  ::selection {
-    background-color: #F5412C;
-    color: white;
+    @apply bg-[#0B0B0B] text-white overflow-hidden cursor-none selection:bg-[#F5412C] selection:text-white;
   }
 }
 
-@layer utilities {
-  .bg-grid {
-    background-size: 80px 80px;
-    background-image: 
-      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
-    mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 80%);
-    -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 80%);
-  }
-  
-  .light .bg-grid {
-    background-image: 
-      linear-gradient(to right, rgba(10,10,10,0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(10,10,10,0.05) 1px, transparent 1px);
-  }
-
-  .ambient-glow {
-    background: radial-gradient(circle at 50% 40%, rgba(245, 65, 44, 0.09) 0%, transparent 65%);
-  }
-  
-  .light .ambient-glow {
-    background: radial-gradient(circle at 50% 40%, rgba(224, 53, 32, 0.05) 0%, transparent 65%);
-  }
+/* Hide default cursor on interactive elements as well */
+a, button, input {
+  cursor: none !important;
 }
