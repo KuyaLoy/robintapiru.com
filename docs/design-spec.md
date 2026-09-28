@@ -1,23 +1,17 @@
 # Design Specification: Robin Tapiru — Coming Soon Page
 
 ## 1. Design Concept
-**Concept:** *The Active Telemetry Hub (v2 Overhaul)*
+**Concept:** *The Kinetic Monolith (Elite V3 Overhaul)*
 
-**Philosophy:** A coming soon page shouldn't be an empty black box or an unstyled bio card. It must feel like an active, engineered mission control displaying live development telemetry. It marries the surgical high-contrast aesthetic of AIIMS Group with interactive developer craft: live dual-timezone clocks, a functional macOS-style terminal card previewing upcoming projects, compilation progress telemetry, and tactile micro-interactions.
+**Philosophy:** We are stripping away all developer clichés—no terminal windows, no progress bars, no generic tech badges. This design relies on absolute typographic confidence, spatial tension, and Framer Motion spring physics. It is an Awwwards-tier execution that proves technical mastery without explicitly stating it.
 
 ---
 
 ## 2. Layout & Visual Hierarchy
-- **Desktop Grid:** 12-column balanced dual grid (`lg:grid-cols-12`). Left 6 columns host the Hero, Announcement badge, and Compilation Progress meter. Right 6 columns host the interactive Terminal Telemetry window. No dead empty void.
-- **Top Utility Header:** Monogram (`RT // DEV`), Live Dual Clocks (Dubai GST & Manila PHT with live ticking seconds), and Theme Toggle.
-- **Atmosphere:** Deep `#0B0B0B` dark surface with grid lines + an ambient slow-pulsing radial glow beam in AIIMS Red (`#F5412C` at 8% opacity).
-
-- **Grid System:** 12-column CSS Grid.
-- **Container:** `max-w-7xl`, `mx-auto`, `px-6` (mobile) to `px-12` (desktop).
-- **Alignment:** All text content is strictly flush-left to create a razor-sharp vertical axis.
-- **Spacing System:** Modular scale based on 8px baseline (`rem`). 
-  - Section gaps: `4rem` (64px)
-  - Element gaps: `1rem` (16px) to `1.5rem` (24px)
+- **Canvas:** The browser window is the container. No grids, no boxes.
+- **Centerpiece:** Massive, viewport-scaling kinetic typography (`R — T / AGENCY ENGINEER`) sitting dead center, functioning as a magnetic physics body.
+- **The Razor Line:** A single 1px horizontal line across the lower third of the screen in AIIMS Red (`#F5412C`), supporting extreme micro-typography (10px, wide tracking).
+- **Intelligent UI:** Default cursor is hidden, replaced by a custom 8px white dot with `mix-blend-mode: difference` that scales up on hover, seamlessly inverting text beneath it.
 
 ---
 
