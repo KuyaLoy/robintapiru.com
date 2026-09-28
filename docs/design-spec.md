@@ -1,16 +1,16 @@
 # Design Specification: Robin Tapiru — Coming Soon Page
 
 ## 1. Design Concept
-**Concept:** *The Active Build*
+**Concept:** *The Active Telemetry Hub (v2 Overhaul)*
 
-**Philosophy:** A coming soon page shouldn't feel like a locked door; it should feel like a glass wall into a workshop. This design eschews marketing fluff for developer realism, treating the page as a live build environment. It marries the surgical, high-end agency aesthetic of AIIMS Group (stark contrasts, rigid alignment, purposeful accents) with the community-minded craftsmanship of Robin's independent civic tech work. It is intentionally severe, highly polished, and entirely devoid of generic "AI slop." The interface *is* the portfolio.
+**Philosophy:** A coming soon page shouldn't be an empty black box or an unstyled bio card. It must feel like an active, engineered mission control displaying live development telemetry. It marries the surgical high-contrast aesthetic of AIIMS Group with interactive developer craft: live dual-timezone clocks, a functional macOS-style terminal card previewing upcoming projects, compilation progress telemetry, and tactile micro-interactions.
 
 ---
 
 ## 2. Layout & Visual Hierarchy
-
-**Structure:** Left-anchored, bottom-weighted (editorial style).
-By avoiding the cliché dead-center alignment, the page feels like an editorial spread. Content rests comfortably in the lower left quadrant of the viewport, creating massive, luxurious negative space in the top right.
+- **Desktop Grid:** 12-column balanced dual grid (`lg:grid-cols-12`). Left 6 columns host the Hero, Announcement badge, and Compilation Progress meter. Right 6 columns host the interactive Terminal Telemetry window. No dead empty void.
+- **Top Utility Header:** Monogram (`RT // DEV`), Live Dual Clocks (Dubai GST & Manila PHT with live ticking seconds), and Theme Toggle.
+- **Atmosphere:** Deep `#0B0B0B` dark surface with grid lines + an ambient slow-pulsing radial glow beam in AIIMS Red (`#F5412C` at 8% opacity).
 
 - **Grid System:** 12-column CSS Grid.
 - **Container:** `max-w-7xl`, `mx-auto`, `px-6` (mobile) to `px-12` (desktop).
