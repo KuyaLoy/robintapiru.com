@@ -1,0 +1,10 @@
+{
+  "name": "robintapiru-com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "echo \"static site, nothing to build\"",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  }
+}
